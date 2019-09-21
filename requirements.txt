@@ -1,0 +1,8 @@
+Django
+djangorestframework
+django-rest-knox
+pillow
+django-debug-toolbar==1.10.1
+python-decouple==3.1
+pytz==2018.5
+sqlparse==0.2.4
