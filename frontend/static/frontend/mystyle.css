@@ -344,6 +344,9 @@ body {
 .centered-content-inner {
     position: relative;
     left: -50%;
+    display : flex;
+    align-items : center;
+    margin-top : 2rem;
 }
 
 .text-helper {
@@ -501,6 +504,19 @@ body {
 }
 
 /*************> Input <*********************/
+.user-sex-select {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.user-sex-select-choice  {
+    width: 100%;
+    padding: 10px;
+}
 .user-info-input-wrap {
     display: flex;
     justify-content: center;
@@ -536,7 +552,7 @@ body {
 
 .user-info-input-sex {
     padding: 0px;
-    background-color: var(--user-hr);
+    background-color: var(--user-bg2);
     border-bottom: 1px solid #fff;
     font-size: 24px;
     width: 100%;
@@ -550,7 +566,7 @@ body {
 }
 
 .user-info-input-sex:hover {
-    background-image: var(--user-bg2);
+    background-color: #68d377;
 }
 
 .user-info-btn i {
@@ -812,5 +828,112 @@ body {
         width: 250px;
         right: calc(50% - 125px);
         left: calc(50% - 125px);
+    }
+}
+
+/********************
+SCROLL BAR STYLING
+********************/
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+.cdscds{
+    color :#68d377
+}
+
+
+
+
+
+
+
+
+
+
+#loader-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--user-bg2);
+    z-index: 10;
+}
+
+.loader-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -52px;
+    font-size: 125%;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fefefe;
+}
+
+.loader-circle {
+    width: 180px;
+    height: 180px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-top: 5px solid #fefefe;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+    margin-top: -90px;
+    margin-left: -90px;
+    -webkit-animation: loader 1s infinite linear;
+    animation: loader 1s infinite linear;
+}
+
+@-webkit-keyframes loader {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
